@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import s from './SelectionScreen.css'
 
 class SelectionScreen extends Component {
 
@@ -8,11 +9,14 @@ class SelectionScreen extends Component {
 
   render() {
     return (
-      <div>
-        <div onClick={this.onButtonClick.bind(this, 'rock')} className="rock">Rock</div>
-        <div onClick={this.onButtonClick.bind(this, 'paper')} className="paper">Paper</div>
-        <div onClick={this.onButtonClick.bind(this, 'scissors')} className="scissors">Scissors</div>
-      </div>
+      <section>
+        <header>Choose your sign:</header>
+        <section>
+          <div className="sign rock" onClick={this.onButtonClick.bind(this, 'rock')}>Rock</div>
+          <div className="sign paper" onClick={this.onButtonClick.bind(this, 'paper')}>Paper</div>
+          <div className="sign scissors" onClick={this.onButtonClick.bind(this, 'scissors')}>Scissors</div>
+        </section>
+      </section>
     )
   }
 }
