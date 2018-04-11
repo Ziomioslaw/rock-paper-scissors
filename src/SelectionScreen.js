@@ -1,10 +1,27 @@
 import React, { Component } from 'react'
-import s from './SelectionScreen.css'
+import './SelectionScreen.css'
+import store from './store'
+import { chooseRock, choosePaper, chooseScissors } from './actions'
 
 class SelectionScreen extends Component {
 
   onButtonClick(type: string) {
-    console.log(this, type)
+    switch (type) {
+      case 'rock':
+        store.dispatch(chooseRock())
+        break
+
+      case 'paper':
+        store.dispatch(choosePaper())
+        break
+
+      case 'scissors':
+        store.dispatch(chooseScissors())
+        break
+
+      default:
+        throw new Error('Unknown button: ' + type)
+    }
   }
 
   render() {
