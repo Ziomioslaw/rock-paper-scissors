@@ -1,17 +1,22 @@
+export const USER_CHOOSE = 'USER_CHOOSE'
+
 export function chooseRock() {
   return {
-    type: 'CHOOSE_ROCK'
+    type: USER_CHOOSE,
+    value: 'rock'
   }
 }
 
 export function choosePaper() {
   return {
-    type: 'CHOOSE_PAPER'
+    type: USER_CHOOSE,
+    value: 'paper'
   }
 }
 
 export function chooseScissors() {
   return {
-    type: 'CHOOSE_SCISSORS'
+    type: USER_CHOOSE,
+    value: 'scissors'
   }
 }

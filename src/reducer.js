@@ -1,8 +1,9 @@
+import { USER_CHOOSE } from './actions'
+
 const reducer = (state, action) => {
-  switch (action) {
-    case 'USER_CHOOSE_ROCK':
-    case 'USER_CHOOSE_PAPER':
-    case 'USER_CHOOSE_SCISSORS':
+  console.log(action)
+  switch (action.type) {
+    case USER_CHOOSE:
     default:
       return state
   }
