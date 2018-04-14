@@ -1,7 +1,12 @@
 import { createStore } from 'redux'
 import reducer from './reducer'
 
-const initialState = { count: 0 }
+const initialState = {
+  ai_points: 0,
+  player_points: 0,
+  ai_selected: null
+}
+
 const store = createStore(reducer, initialState)
 
 export default store
