@@ -1,34 +1,5 @@
 import { USER_CHOOSE, TURN_BEGIN } from './actions'
-
-
-function resolve_fight(one, two) {
-  if (one === two) {
-    return [0, 0]
-  }
-
-  switch (one) {
-    case 'rock':
-      if (two === 'paper')
-        return [0, 1]
-      else
-        return [1, 0]
-
-    case 'paper':
-      if (two === 'scissors')
-        return [0, 1]
-      else
-        return [1, 0]
-
-    case 'scissors':
-      if (two === 'rock')
-        return [0, 1]
-      else
-        return [1, 0]
-
-    default:
-      throw Error(`Unknown value: "${one}"`)
-  }
-}
+import { resolve_fight } from './logic'
 
 
 const reducer = (state, action) => {
