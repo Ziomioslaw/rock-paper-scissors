@@ -1,5 +1,5 @@
 import { PAPER, ROCK, SCISSORS, PlayerOptions } from './logic'
-
+import ai_select from './ai'
 
 export const USER_CHOOSE = 'USER_CHOOSE'
 export const TURN_BEGIN = 'TURN_BEGIN'
@@ -30,10 +30,8 @@ export function chooseScissors() {
 
 
 export function turnBegin() {
-  const ai_select = Math.floor((Math.random() * 3))
-
   return {
     type: TURN_BEGIN,
-    ai_select: PlayerOptions[ai_select]
+    ai_select: PlayerOptions[ai_select()]
   }
 }
