@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
-import store from './store'
-import { turnBegin } from './actions'
+import App from './gui/App'
+import store from './logic/store'
+import { turnBegin } from './logic/actions'
 import registerServiceWorker from './registerServiceWorker'
 
 

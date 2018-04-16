@@ -1,5 +1,6 @@
 import { USER_CHOOSE, TURN_BEGIN } from './actions'
 import { resolve_fight } from './logic'
+import { addToHistory } from './history'
 
 
 const reducer = (state, action) => {
@@ -12,6 +13,7 @@ const reducer = (state, action) => {
 
     case USER_CHOOSE:
       const [ ai_point, player_point ] = resolve_fight(state.ai_selected, action.value)
+      addToHistory(state.ai_selected, action.value, [ai_point, player_point])
 
       return {
         ...state,

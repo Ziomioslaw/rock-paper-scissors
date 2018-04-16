@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './SelectionScreen.css'
-import store from './store'
+import store from '../logic/store'
 import {
   chooseRock,
   choosePaper,
   chooseScissors,
   turnBegin
-} from './actions'
+} from '../logic/actions'
+
 
 class SelectionScreen extends Component {
 
