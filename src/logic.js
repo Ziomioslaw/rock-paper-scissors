@@ -12,22 +12,13 @@ export function resolve_fight(one, two) {
 
   switch (one) {
     case ROCK:
-      if (two === PAPER)
-        return [0, 1]
-      else
-        return [1, 0]
+      return (two === PAPER) ? [0, 1] : [1, 0]
 
     case PAPER:
-      if (two === SCISSORS)
-        return [0, 1]
-      else
-        return [1, 0]
+      return (two === SCISSORS) ? [0, 1] : [1, 0]
 
     case SCISSORS:
-      if (two === ROCK)
-        return [0, 1]
-      else
-        return [1, 0]
+      return (two === ROCK) ? [0, 1] : [1, 0]
 
     default:
       throw Error(`Unknown value: "${one}"`)
