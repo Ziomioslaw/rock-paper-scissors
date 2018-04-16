@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import './SelectionScreen.css'
 import store from './store'
-import { chooseRock, choosePaper, chooseScissors } from './actions'
+import {
+  chooseRock,
+  choosePaper,
+  chooseScissors,
+  turnBegin
+} from './actions'
 
 class SelectionScreen extends Component {
 
@@ -22,6 +27,8 @@ class SelectionScreen extends Component {
       default:
         throw new Error('Unknown button: ' + type)
     }
+
+    store.dispatch(turnBegin())
   }
 
   render() {
