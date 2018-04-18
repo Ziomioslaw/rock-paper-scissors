@@ -5,9 +5,9 @@ import App from './gui/App'
 import store from './logic/store'
 import { turnBegin } from './logic/actions'
 import registerServiceWorker from './registerServiceWorker'
+import { Provider } from 'react-redux'
 
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
 registerServiceWorker()
 
 store.dispatch(turnBegin())
