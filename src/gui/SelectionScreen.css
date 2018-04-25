@@ -1,6 +1,19 @@
 .sign {
-    width: 100px;
-    height: 100px;
-    border: 1px solid blue;
-    float: left;
+  width: 250px;
+  height: 250px;
+  border: 0 solid;
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.rock {
+  background-image: url('./rock.png');
+}
+
+.paper {
+  background-image: url('./paper.png');
+}
+
+.scissors {
+  background-image: url('./scissors.png');
 }
