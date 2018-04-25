@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import './PointsDisplay.css'
 
 
 class PointsDisplay extends Component {
   render() {
-    return <div>
+    return <header>
       <span>AI: {this.props.ai_points}</span>
       <span>You: {this.props.player_points}</span>
-    </div>
+    </header>
   }
 }
 
