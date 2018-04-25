@@ -22,8 +22,8 @@ class History extends Component {
     ))
 
     return (
-      <section>
-        <header>Header</header>
+      <section className='history'>
+        <header>History</header>
         <section>
           {history}
         </section>
