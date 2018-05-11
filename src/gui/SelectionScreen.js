@@ -36,7 +36,7 @@ class SelectionScreen extends Component {
     return (
       <section>
         <header>Choose your sign:</header>
-        <section>
+        <section className="signs">
           <div className="sign rock" onClick={this.onButtonClick.bind(this, 'rock')}></div>
           <div className="sign paper" onClick={this.onButtonClick.bind(this, 'paper')}></div>
           <div className="sign scissors" onClick={this.onButtonClick.bind(this, 'scissors')}></div>
