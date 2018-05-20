@@ -5,7 +5,6 @@ import './PointsDisplay.css'
 
 class PointsDisplay extends Component {
   render() {
-    console.log('x', this.props  )
     const percentage_span = this.props.all_plays
       ? (this.props.player_points / this.props.all_plays).toFixed(2) + '%'
       : '-'
@@ -19,7 +18,6 @@ class PointsDisplay extends Component {
 }
 
 const mapStateToProps = store => {
-  console.log(store.history)
   return {
     ai_points: store.ai_points,
     player_points: store.player_points,
