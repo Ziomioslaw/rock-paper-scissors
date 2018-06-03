@@ -7,6 +7,8 @@ import { turnBegin } from './logic/actions'
 import registerServiceWorker from './registerServiceWorker'
 import { Provider } from 'react-redux'
 
+console.log(store)
+
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
 registerServiceWorker()
 

@@ -3,7 +3,7 @@ import ai_select from './ai'
 
 export const USER_CHOOSE = 'USER_CHOOSE'
 export const TURN_BEGIN = 'TURN_BEGIN'
-
+export const TURN_COMPLETE = 'TURN_COMPLETE'
 
 export function chooseRock() {
   return {
@@ -32,6 +32,6 @@ export function chooseScissors() {
 export function turnBegin() {
   return {
     type: TURN_BEGIN,
-    ai_select: PlayerOptions[ai_select()]
+    ai_selected: PlayerOptions[ai_select()]
   }
 }

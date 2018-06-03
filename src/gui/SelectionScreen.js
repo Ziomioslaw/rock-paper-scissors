@@ -4,8 +4,7 @@ import store from '../logic/store'
 import {
   chooseRock,
   choosePaper,
-  chooseScissors,
-  turnBegin
+  chooseScissors
 } from '../logic/actions'
 
 
@@ -26,10 +25,8 @@ class SelectionScreen extends Component {
         break
 
       default:
-        throw new Error('Unknown button: ' + type)
+        throw new Error(`Unknown button: ${type}`)
     }
-
-    store.dispatch(turnBegin())
   }
 
   render() {

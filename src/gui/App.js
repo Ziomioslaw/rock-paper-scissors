@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import History from './History'
-import SelectionScreen from './SelectionScreen'
 import PointsDisplay from './PointsDisplay'
+import PlayTable from './PlayTable'
 import './App.css'
 
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <PointsDisplay />
-        <SelectionScreen />
+        <PlayTable />
         <History />
       </div>
     )
