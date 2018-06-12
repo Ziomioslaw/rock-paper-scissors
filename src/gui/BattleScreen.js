@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
+import { completeEnd } from '../logic/actions'
+import store from '../logic/store'
+
 
 class BattleScreen extends Component {
+  onButtonClick() {
+    store.dispatch(completeEnd())
+  }
+
   render() {
     const result = 'Result of battle'
 
@@ -10,9 +17,10 @@ class BattleScreen extends Component {
           <div className={'sign ' + this.props.player1selection}></div>
           <div className={'sign ' + this.props.player2selection}></div>
         </div>
-        <button>Continue</button>
+        <button onClick={this.onButtonClick.bind(this)}>Continue</button>
       </section>
   }
 }
+
 
 export default BattleScreen

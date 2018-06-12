@@ -19,7 +19,6 @@ class PlayTable extends Component {
   }
 
   renderForStage(stage) {
-console.log(this.props)
     switch (stage) {
       case STAGE_BEFORE:
         return <SelectionScreen />
