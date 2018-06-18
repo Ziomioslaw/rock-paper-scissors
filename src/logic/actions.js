@@ -4,6 +4,8 @@ import ai_select from './ai'
 export const USER_CHOOSE = 'USER_CHOOSE'
 export const TURN_BEGIN = 'TURN_BEGIN'
 export const TURN_COMPLETE = 'TURN_COMPLETE'
+export const START_GAME = 'START_GAME'
+export const END_GAME = 'END_GAME'
 
 
 export function chooseRock() {
@@ -38,8 +40,15 @@ export function turnBegin() {
 }
 
 
-export function completeEnd() {
+export function startGame() {
   return {
-    type: TURN_COMPLETE
+    type: START_GAME
+  }
+}
+
+
+export function endGame() {
+  return {
+    type: END_GAME
   }
 }

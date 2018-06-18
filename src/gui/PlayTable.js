@@ -24,8 +24,18 @@ class PlayTable extends Component {
         return <SelectionScreen />
 
       case STAGE_MIDDLE:
-        return <BattleScreen player1selection={this.props.ai_selection}
-                             player2selection={this.props.player_selection} />
+        const result = {
+            player1: {
+              label: 'You',
+              selection: this.props.player_selection
+            },
+            player2: {
+              label: 'AI',
+              selection: this.props.ai_selection
+            }
+        }
+
+        return <BattleScreen data={result} />
 
       case STAGE_AFTER:
         return <div>dsfsdfsdf</div>

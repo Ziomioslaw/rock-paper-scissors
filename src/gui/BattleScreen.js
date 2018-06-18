@@ -1,23 +1,30 @@
 import React, { Component } from 'react'
-import { completeEnd } from '../logic/actions'
+import { turnBegin, endGame } from '../logic/actions'
 import store from '../logic/store'
 
 
 class BattleScreen extends Component {
-  onButtonClick() {
-    store.dispatch(completeEnd())
+  onButtonAgainClick() {
+    store.dispatch(turnBegin())
+  }
+
+  onButtonCloseClick() {
+    store.dispatch(endGame())
   }
 
   render() {
-    const result = 'Result of battle'
+    const data = this.props.data;
 
     return <section>
-        <header>{result}</header>
+        <header>Result of battle</header>
         <div>
-          <div className={'sign ' + this.props.player1selection}></div>
-          <div className={'sign ' + this.props.player2selection}></div>
+          <div className={'sign ' + data.player1.selection}>{data.player1.label}</div>
+          <div className={'sign ' + data.player2.selection}>{data.player2.label}</div>
         </div>
-        <button onClick={this.onButtonClick.bind(this)}>Continue</button>
+        <footer>
+          <button onClick={this.onButtonAgainClick.bind(this)}>Again</button>
+          <button onClick={this.onButtonCloseClick.bind(this)}>Close</button>
+        </footer>
       </section>
   }
 }
